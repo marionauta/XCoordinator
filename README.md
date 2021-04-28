@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## 🤸‍♂️ Extras
 
-For more advanced use, XCoordinator offers many more customization options. We introduce custom animated transitions and deep linking. Furthermore, extensions for use in reactive programming with RxSwift/Combine and options to split up huge routes are described.
+For more advanced use, XCoordinator offers many more customization options. We introduce custom animated transitions and deep linking. Furthermore, extensions for use in reactive programming with Combine and options to split up huge routes are described.
 
 ### 🌗 Custom Transitions
 
@@ -219,9 +219,9 @@ We suggest to not use initial routes in the initializers of sibling coordinators
 
 ⚠️ If you perform transitions involving a sibling coordinator directly (e.g. pushing a sibling coordinator without overriding its `viewController` property), your app will most likely crash.
 
-### 🚀 RxSwift/Combine extensions
+### 🚀 Combine extensions
 
-Reactive programming can be very useful to keep the state of view and model consistent in a MVVM architecture. Instead of relying on the completion handler of the `trigger` method available in any `Router`, you can also use our RxSwift-extension. In the example application, we use Actions (from the [Action](https://github.com/RxSwiftCommunity/Action) framework) to trigger routes on certain UI events - e.g. to trigger `LoginRoute.home` in `LoginViewModel`, when the login button is tapped.
+Reactive programming can be very useful to keep the state of view and model consistent in a MVVM architecture. Instead of relying on the completion handler of the `trigger` method available in any `Router`. In the example application, we use Actions (from the [Action](https://github.com/RxSwiftCommunity/Action) framework) to trigger routes on certain UI events - e.g. to trigger `LoginRoute.home` in `LoginViewModel`, when the login button is tapped.
 
 ```swift
 class LoginViewModelImpl: LoginViewModel, LoginViewModelInput, LoginViewModelOutput {
@@ -329,12 +329,6 @@ To integrate XCoordinator into your Xcode project using CocoaPods, add this to y
 pod 'XCoordinator', '~> 2.0'
 ```
 
-To use the RxSwift extensions, add this to your `Podfile`:
-
-```ruby
-pod 'XCoordinator/RxSwift', '~> 2.0'
-```
-
 To use the Combine extensions, add this to your `Podfile`:
 
 ```ruby
@@ -358,8 +352,8 @@ If this is your first time using Carthage in the project, you'll need to go thro
 See [this WWDC presentation](https://developer.apple.com/videos/play/wwdc2019/408/) about more information how to adopt Swift packages in your app.
 
 Specify `https://github.com/quickbirdstudios/XCoordinator.git` as the `XCoordinator` package link. 
-You can then decide between three different frameworks, i.e. `XCoordinator`, `XCoordinatorRx` and `XCoordinatorCombine`. 
-While `XCoordinator` contains the main framework, you can choose `XCoordinatorRx` or `XCoordinatorCombine` to get `RxSwift` or `Combine` extensions as well.
+You can then decide between two different frameworks, i.e. `XCoordinator` and `XCoordinatorCombine`.
+While `XCoordinator` contains the main framework, you can choose `XCoordinatorCombine` to get `Combine` extensions as well.
 
 #### Manually
 

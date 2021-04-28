@@ -338,7 +338,7 @@ It&rsquo;s especially useful for implementing MVVM-C, Model-View-ViewModel-Coord
 </code></pre>
 <h2 id='️-extras' class='heading'>🤸‍♂️ Extras</h2>
 
-<p>For more advanced use, XCoordinator offers many more customization options. We introduce custom animated transitions and deep linking. Furthermore, extensions for use in reactive programming with RxSwift/Combine and options to split up huge routes are described.</p>
+<p>For more advanced use, XCoordinator offers many more customization options. We introduce custom animated transitions and deep linking. Furthermore, extensions for use in reactive programming with Combine and options to split up huge routes are described.</p>
 <h3 id='custom-transitions' class='heading'>🌗 Custom Transitions</h3>
 
 <p>Custom animated transitions define presentation and dismissal animations. You can specify <code><a href="Classes/Animation.html">Animation</a></code> objects in <code>prepareTransition(for:)</code> in your coordinator for several common transitions, such as <code>present</code>, <code>dismiss</code>, <code>push</code> and <code>pop</code>. Specifying no animation (<code>nil</code>) results in not overriding previously set animations. Use <code><a href="Classes/Animation.html#/s:12XCoordinator9AnimationC7defaultACvpZ">Animation.default</a></code> to reset previously set animation to the default animations UIKit offers.</p>
@@ -437,7 +437,7 @@ Since you can specify the rootViewController in the initializer of a new coordin
 <p>We suggest to not use initial routes in the initializers of sibling coordinators, but instead using the transition option in the <code>FirstCoordinator</code> instead. </p>
 
 <p>⚠️ If you perform transitions involving a sibling coordinator directly (e.g. pushing a sibling coordinator without overriding its <code>viewController</code> property), your app will most likely crash.</p>
-<h3 id='rxswift-combine-extensions' class='heading'>🚀 RxSwift/Combine extensions</h3>
+<h3 id='combine-extensions' class='heading'>🚀 Combine extensions</h3>
 
 <p>Reactive programming can be very useful to keep the state of view and model consistent in a MVVM architecture. Instead of relying on the completion handler of the <code>trigger</code> method available in any <code><a href="Protocols/Router.html">Router</a></code>, you can also use our RxSwift-extension. In the example application, we use Actions (from the <a href="https://github.com/RxSwiftCommunity/Action">Action</a> framework) to trigger routes on certain UI events - e.g. to trigger <code>LoginRoute.home</code> in <code>LoginViewModel</code>, when the login button is tapped.</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">LoginViewModelImpl</span><span class="p">:</span> <span class="kt">LoginViewModel</span><span class="p">,</span> <span class="kt">LoginViewModelInput</span><span class="p">,</span> <span class="kt">LoginViewModelOutput</span> <span class="p">{</span>
@@ -567,8 +567,8 @@ You can decide between the following router abstractions of your coordinator:</p
 <p>See <a href="https://developer.apple.com/videos/play/wwdc2019/408/">this WWDC presentation</a> about more information how to adopt Swift packages in your app.</p>
 
 <p>Specify <code>https://github.com/quickbirdstudios/XCoordinator.git</code> as the <code>XCoordinator</code> package link. 
-You can then decide between three different frameworks, i.e. <code>XCoordinator</code>, <code>XCoordinatorRx</code> and <code>XCoordinatorCombine</code>. 
-While <code>XCoordinator</code> contains the main framework, you can choose <code>XCoordinatorRx</code> or <code>XCoordinatorCombine</code> to get <code>RxSwift</code> or <code>Combine</code> extensions as well.</p>
+You can then decide between two different frameworks, i.e. <code>XCoordinator</code> and <code>XCoordinatorCombine</code>.
+While <code>XCoordinator</code> contains the main framework, you can choose <code>XCoordinatorCombine</code> to get <code>Combine</code> extensions as well.</p>
 <h4 id='manually' class='heading'>Manually</h4>
 
 <p>If you prefer not to use any of the dependency managers, you can integrate XCoordinator into your project manually, by downloading the source code and placing the files on your project directory.  </p>
