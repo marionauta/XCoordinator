@@ -4,29 +4,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "XCoordinator",
+    name: "ZCoordinator",
     platforms: [.iOS(.v9)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "XCoordinator",
-            targets: ["XCoordinator"]),
+            name: "ZCoordinator",
+            targets: ["ZCoordinator"]),
         .library(
-            name: "XCoordinatorCombine",
-            targets: ["XCoordinatorCombine"]),
+            name: "ZCoordinatorCombine",
+            targets: ["ZCoordinatorCombine"]),
     ],
     dependencies: [],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "XCoordinator",
+            name: "ZCoordinator",
             dependencies: []),
         .target(
-            name: "XCoordinatorCombine",
-            dependencies: ["XCoordinator"]),
+            name: "ZCoordinatorCombine",
+            dependencies: ["ZCoordinator"]),
         .testTarget(
-            name: "XCoordinatorTests",
-            dependencies: ["XCoordinator"]),
+            name: "ZCoordinatorTests",
+            dependencies: ["ZCoordinator"]),
     ]
 )

@@ -1,15 +1,15 @@
 //
 //  Router+Combine.swift
-//  XCoordinatorCombine
+//  ZCoordinatorCombine
 //
 //  Created by Paul Kraft on 28.08.19.
 //  Copyright © 2018 QuickBird Studios. All rights reserved.
 //
 
-#if canImport(Combine) && canImport(XCoordinator)
+#if canImport(Combine) && canImport(ZCoordinator)
 
 import Combine
-import XCoordinator
+import ZCoordinator
 
 public struct PublisherExtension<Base> {
     public let base: Base

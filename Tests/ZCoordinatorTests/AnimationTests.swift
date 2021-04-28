@@ -1,13 +1,13 @@
 //
 //  AnimationTests.swift
-//  XCoordinator_Example
+//  ZCoordinator_Example
 //
 //  Created by Paul Kraft on 16.09.18.
 //  Copyright © 2018 QuickBird Studios. All rights reserved.
 //
 
 import UIKit
-import XCoordinator
+import ZCoordinator
 import XCTest
 
 class AnimationTests: XCTestCase {

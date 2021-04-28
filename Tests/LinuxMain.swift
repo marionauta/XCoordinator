@@ -1,7 +1,7 @@
 import XCTest
 
-import XCoordinatorTests
+import ZCoordinatorTests
 
 var tests = [XCTestCaseEntry]()
-tests += XCoordinatorTests.allTests()
+tests += ZCoordinatorTests.allTests()
 XCTMain(tests)
